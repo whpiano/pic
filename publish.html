@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>发布内容</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon-camera.svg">
+  <link rel="shortcut icon" href="./assets/icons/favicon-camera.svg">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <noscript><link rel="stylesheet" href="./assets/css/noscript.css"></noscript>
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <header id="header">
+      <h1><a href="./index.html"><strong>发布</strong> · 一句话 + 一张图</a></h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="icon solid fa-home"><span class="label">首页</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="publish-main">
+      <section class="publish-panel">
+        <p class="hint">
+          内容会写入 GitHub 仓库：<code>images/</code> 保存图片，<code>posts/</code> 保存文本。
+        </p>
+        <form id="publish-form" class="form">
+          <label class="field">
+            <span>一句话</span>
+            <textarea id="text" maxlength="280" rows="4" required placeholder="输入要发布的一句话..."></textarea>
+          </label>
+          <label class="field">
+            <span>图片</span>
+            <input id="image" type="file" accept="image/*" required>
+          </label>
+          <label class="field">
+            <span>GitHub Token（需要 repo 权限）</span>
+            <input id="token" type="password" autocomplete="off" placeholder="ghp_...">
+          </label>
+          <button id="submit-btn" type="submit">发布到 GitHub</button>
+        </form>
+        <p id="publish-status" class="status"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="./config.js"></script>
+  <script src="./assets/js/publish.js" type="module"></script>
+</body>
+</html>
